@@ -138,5 +138,6 @@ Gradle plugins: Plugins are used to extend the functionality of Gradle. They can
 
 - The test go into `src/test/java` directory.
 - `testImplementation` dependencies will end up in compile and runtime classpath of the test task.
-- 
+- The tests summary will be in `build/reports/tests/test/index.html`.
+
 

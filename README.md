@@ -133,4 +133,6 @@ Gradle plugins: Plugins are used to extend the functionality of Gradle. They can
 - Gradle expects java classes to live in the `src/main/java` directory. We need to use the `java` plugin to tell Gradle that we want to compile Java code. This plugin adds tasks for compiling Java code, running tests, and creating JAR files.
 - You use the `plugins` method and pass the closure.
 - After adding the plugin, you can run `./gradlew tasks` to see the list of available tasks, including those added by the Java plugin.
+- Running `build` will generate the JAR file, but it won't run because of the missing manifest file. We can use `jar` task to create a JAR file with the correct manifest.
 - 
+

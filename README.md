@@ -97,3 +97,40 @@ Gradle project: A container of what everything Gradle knows about the applicatio
 Build script: Each gradle project can have a build script, which is a file that contains the configuration for the project. The build script is written in Groovy or Kotlin DSL and defines tasks, dependencies, and plugins for the project. You tell Gradle the information about the application through configuration. Gradle uses that information to build the application.
 Gradle tasks: A task is a single unit of work that Gradle can execute. Tasks can be defined in the build script and can perform actions such as compiling code, running tests, or creating JAR files. Tasks can depend on other tasks, allowing you to define a sequence of actions to be executed. Individual build actions that we can run from command line.
 Gradle plugins: Plugins are used to extend the functionality of Gradle. They can add new tasks, configurations, and behaviors to your project. Gradle comes with a set of built-in plugins, such as the Java plugin, which provides tasks for compiling Java code and running tests. You can also create custom plugins to encapsulate specific functionality for your project. They add tasks to our project which we can run.
+
+#### Useful Groovy features in Gradle:
+- **Closures**: Groovy closures are blocks of code that can be passed around and executed later. In Gradle, closures are often used to define tasks and configurations.
+- **Dynamic Typing**: Groovy allows you to define variables without explicitly specifying their types, making the code more concise and flexible.
+- **String Interpolation**: Groovy supports string interpolation, allowing you to embed variables directly within strings using the `${}` syntax.
+- **Method Missing**: Groovy allows you to define a method that will be called when a method that does not exist is invoked. This can be useful for creating dynamic behavior in your build scripts.
+- **Property Missing**: Similar to method missing, Groovy allows you to define a property that will be called when a property that does not exist is accessed. This can be useful for creating dynamic configurations in your build scripts.
+- **Safe Navigation Operator**: Groovy provides a safe navigation operator (`?.`) that allows you to safely access properties or methods of an object that may be null, preventing NullPointerExceptions.
+- **GString**: Groovy's GString allows you to create strings that can contain expressions, making it easier to build dynamic strings in your build scripts.
+- **Method Chaining**: Groovy allows you to chain method calls together, making the code more concise and readable. This is often used in Gradle to configure tasks and dependencies in a fluent style.
+- **Named Parameters**: Groovy allows you to define methods with named parameters, making it easier to pass configuration options to tasks and plugins in a clear and readable way.
+- **Default Parameters**: Groovy allows you to define default values for method parameters, making it easier to create flexible and reusable methods in your build scripts.
+- **Operator Overloading**: Groovy allows you to define custom behavior for operators, enabling you to create more expressive and readable code in your build scripts.
+- **Meta-programming**: Groovy supports meta-programming, allowing you to modify classes and methods at runtime. This can be useful for creating dynamic behavior in your build scripts or plugins.
+- **Annotations**: Groovy supports annotations, which can be used to provide metadata about classes, methods, or properties. This can be useful for defining custom behaviors or configurations in your build scripts.
+- **Type Checking**: Groovy allows you to perform type checking at compile time, helping to catch errors early in the development process. This can be useful for ensuring that your build scripts are robust and maintainable.
+- **Builder Pattern**: Groovy's builder pattern allows you to create complex objects in a more readable and concise way. This is often used in Gradle to define configurations and tasks in a fluent style.
+- **AST Transformations**: Groovy allows you to define custom Abstract Syntax Tree (AST) transformations, enabling you to modify the structure of your code at compile time. This can be useful for creating custom behaviors or configurations in your build scripts.
+- **Dynamic Method Invocation**: Groovy allows you to invoke methods dynamically at runtime, enabling you to create flexible and reusable code in your build scripts.
+- **Dynamic Property Access**: Groovy allows you to access properties dynamically, enabling you to create flexible and reusable configurations in your build scripts.
+- **MetaClass**: Groovy's MetaClass allows you to modify the behavior of classes at runtime, enabling you to create dynamic and flexible build scripts. You can add methods, properties, or behaviors to existing classes without modifying their source code.
+- **Category Classes**: Groovy allows you to define category classes that can add methods to existing classes dynamically. This can be useful for extending the functionality of Gradle's built-in classes or adding custom behaviors to your build scripts.
+- **ExpandoMetaClass**: Groovy's ExpandoMetaClass allows you to add methods and properties to existing classes at runtime, enabling you to create dynamic and flexible build scripts. This can be useful for extending Gradle's built-in classes or adding custom behaviors to your build scripts.
+- **Dynamic Property Assignment**: Groovy allows you to assign values to properties dynamically, enabling you to create flexible and reusable configurations in your build scripts. This can be useful for defining task properties or configurations that can change based on the build environment or other factors.
+- **Dynamic Method Resolution**: Groovy allows you to resolve methods dynamically at runtime, enabling you to create flexible and reusable code in your build scripts. This can be useful for defining tasks or configurations that can change based on the build environment or other factors.
+- **Dynamic Class Loading**: Groovy allows you to load classes dynamically at runtime, enabling you to create flexible and reusable code in your build scripts. This can be useful for defining tasks or configurations that can change based on the build environment or other factors.
+- **Dynamic Property Resolution**: Groovy allows you to resolve properties dynamically at runtime, enabling you to create flexible and reusable configurations in your build scripts. This can be useful for defining task properties or configurations that can change based on the build environment or other factors.
+- **Dynamic Method Invocation with Closures**: Groovy allows you to invoke methods dynamically using closures, enabling you to create flexible and reusable code in your build scripts. This can be useful for defining tasks or configurations that can change based on the build environment or other factors.
+- **Dynamic Property Access with Closures**: Groovy allows you to access properties dynamically using closures, enabling you to create flexible and reusable configurations in your build scripts. This can be useful for defining task properties or configurations that can change based on the build environment or other factors.
+- 
+
+
+
+- Gradle expects java classes to live in the `src/main/java` directory. We need to use the `java` plugin to tell Gradle that we want to compile Java code. This plugin adds tasks for compiling Java code, running tests, and creating JAR files.
+- You use the `plugins` method and pass the closure.
+- After adding the plugin, you can run `./gradlew tasks` to see the list of available tasks, including those added by the Java plugin.
+- 

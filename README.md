@@ -134,5 +134,9 @@ Gradle plugins: Plugins are used to extend the functionality of Gradle. They can
 - You use the `plugins` method and pass the closure.
 - After adding the plugin, you can run `./gradlew tasks` to see the list of available tasks, including those added by the Java plugin.
 - Running `build` will generate the JAR file, but it won't run because of the missing manifest file. We can use `jar` task to create a JAR file with the correct manifest.
+
+
+- The test go into `src/test/java` directory.
+- `testImplementation` dependencies will end up in compile and runtime classpath of the test task.
 - 
 
